@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/trending_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="11dp"
+
+        android:fontFamily="sans-serif-black"
+        android:text="Trending Anime On Today: Your Name"
+        android:textStyle="bold" />
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="353dp"
+        android:layout_height="192dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/trending_text"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_anime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/video_view"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/video_view"
+        tools:listitem="@layout/item_anime" />
+
+
+
+</RelativeLayout>
